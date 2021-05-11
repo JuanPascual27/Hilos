@@ -8,7 +8,9 @@ public class HiloVector extends Thread{
          vector[i] = (int)(Math.random()*100+1);
          System.out.println(vector[i]);
       }
-      
+   }
+   
+   public void run(){
       //
       h1 = new Thread(new Runnable() {
          double x = 0;
@@ -52,13 +54,6 @@ public class HiloVector extends Thread{
       h1.start();
       h2.start();
       h3.start();
-      
-      /*try {
-         h1.join();
-         h2.join();
-         h3.join();
-      }
-      catch (InterruptedException e) {}*/
       
    }
    
